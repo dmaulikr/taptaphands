@@ -23,7 +23,7 @@ class GameViewController: UIViewController {
     var startInt = 3
     var startTimer = Timer()
     
-    var gameInt = 3
+    var gameInt = 10
     var gameTimer = Timer()
     
     
@@ -42,7 +42,7 @@ class GameViewController: UIViewController {
         
         startTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(GameViewController.startGameTimer), userInfo: nil, repeats: true)
         
-        gameInt = 10
+        gameInt = 3
         timeLabel.text = String(gameInt)
         
     }
