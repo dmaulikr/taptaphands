@@ -302,6 +302,9 @@
                                 <state key="normal" title="Play Again">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="playAgain:" destination="0yD-1q-2AV" eventType="touchUpInside" id="g5g-VE-EM6"/>
+                                </connections>
                             </button>
                             <button clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XVs-mu-z1v">
                                 <rect key="frame" x="16" y="247" width="343" height="40"/>
