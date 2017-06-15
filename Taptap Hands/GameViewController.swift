@@ -16,8 +16,15 @@ class GameViewController: UIViewController {
     @IBOutlet var button: UIButton!
  
     @IBOutlet var scoreLabel: UILabel!
+    @IBOutlet var timeLabel: UILabel!
     
     var tapInt = 0
+    
+    var startInt = 3
+    var startTimer = Timer()
+    
+    var gameInt = 10
+    var gameTimer = Timer()
     
     
     override func viewDidLoad() {
@@ -28,6 +35,16 @@ class GameViewController: UIViewController {
         
         tapInt = 0
         scoreLabel.text = String(tapInt)
+        
+        startInt = 3
+        button.setTitle(String(startInt), for: .normal)
+        button.isEnabled = false
+        
+        startTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(GameViewController.startGameTimer), userInfo: nil, repeats: true)
+        
+        gameInt = 10
+        timeLabel.text = String(gameInt)
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -37,8 +54,36 @@ class GameViewController: UIViewController {
     }
     
     @IBAction func tapMeButton(_ sender: Any) {
-        tapInt+=1
+        tapInt += 1
         scoreLabel.text = String(tapInt)
+    }
+    
+    func startGameTimer() {
+        startInt = startInt - 1
+        button.setTitle(String(startInt), for: .normal)
+        
+        if (startInt==0) {
+            
+            startTimer.invalidate()
+            
+            button.setTitle("Tap Me", for: .normal)
+            
+            button.isEnabled = true;
+            
+            gameTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector:#selector(GameViewController.game), userInfo: nil, repeats: true)
+            
+        }
+        
+    }
+    
+    func game() {
+        gameInt -= 1
+        timeLabel.text = String(gameInt)
+        
+        if (gameInt == 0) {
+            gameTimer.invalidate()
+            button.isEnabled = false;
+        }
         
     }
     

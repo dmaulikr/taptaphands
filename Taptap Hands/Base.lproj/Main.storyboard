@@ -249,6 +249,7 @@
                         <outlet property="label1" destination="TBG-3a-YRa" id="kG0-Gn-XQY"/>
                         <outlet property="label2" destination="pc5-6n-K3l" id="MwS-kO-GnN"/>
                         <outlet property="scoreLabel" destination="dd4-I6-YBn" id="StC-h9-Pg4"/>
+                        <outlet property="timeLabel" destination="dmn-l5-VxU" id="u2f-MU-Ajw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hrk-ar-9uW" userLabel="First Responder" sceneMemberID="firstResponder"/>
