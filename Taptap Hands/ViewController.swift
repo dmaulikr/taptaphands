@@ -21,6 +21,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         label1.layer.cornerRadius = 5.0
+        label2.layer.cornerRadius = 5.0
         button.layer.cornerRadius = 5.0
         
         

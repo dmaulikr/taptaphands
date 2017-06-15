@@ -39,6 +39,8 @@
                                 <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="70"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
+                                <color key="shadowColor" white="0.0" alpha="0.2540437940140845" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <size key="shadowOffset" width="2" height="2"/>
                             </label>
                             <button clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hLr-VH-ofh">
                                 <rect key="frame" x="16" y="479.5" width="343" height="167.5"/>
@@ -150,6 +152,7 @@
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="75" id="89x-1p-x7q"/>
                                     <constraint firstAttribute="height" relation="lessThanOrEqual" constant="75" id="HnY-Mu-4fT"/>
                                     <constraint firstAttribute="height" constant="75" id="Wss-vG-44U"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="85" id="dUw-x7-Ka0"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="30"/>
                                 <color key="textColor" red="0.96621346470000002" green="0.32434527299999999" blue="0.69473075149999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -166,6 +169,8 @@
                                 <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="45"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
+                                <color key="shadowColor" white="0.0" alpha="0.24502090669014084" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <size key="shadowOffset" width="2" height="2"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pc5-6n-K3l">
                                 <rect key="frame" x="16" y="217" width="343" height="75"/>
@@ -175,10 +180,13 @@
                                     <constraint firstAttribute="height" constant="75" id="433-lt-9P4"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="75" id="K0w-xN-xvF"/>
                                     <constraint firstAttribute="height" relation="lessThanOrEqual" constant="75" id="Kbt-HM-kUB"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="85" id="tmp-e0-yUE"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="30"/>
                                 <color key="textColor" red="0.96621346470000002" green="0.32434527299999999" blue="0.69473075149999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
+                                <color key="shadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <size key="shadowOffset" width="0.0" height="0.0"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dd4-I6-YBn">
                                 <rect key="frame" x="16" y="300" width="343" height="75"/>
@@ -191,6 +199,8 @@
                                 <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="45"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
+                                <color key="shadowColor" white="0.0" alpha="0.24502090669014084" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <size key="shadowOffset" width="2" height="2"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3hw-4A-w1a">
                                 <rect key="frame" x="146" y="545" width="30" height="30"/>
@@ -203,6 +213,9 @@
                                 <state key="normal" title="Tap Me">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="tapMeButton:" destination="njQ-m7-PQL" eventType="touchUpInside" id="fk1-FV-22B"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -211,7 +224,9 @@
                             <constraint firstItem="dd4-I6-YBn" firstAttribute="leading" secondItem="dE2-KC-m07" secondAttribute="leadingMargin" id="I7T-Qk-Rlo"/>
                             <constraint firstItem="noR-e5-i5O" firstAttribute="top" secondItem="eKb-ng-IcC" secondAttribute="bottom" constant="20" id="IJ9-YN-fne"/>
                             <constraint firstItem="dd4-I6-YBn" firstAttribute="top" secondItem="pc5-6n-K3l" secondAttribute="bottom" constant="8" id="Jyf-JX-RNW"/>
+                            <constraint firstItem="pc5-6n-K3l" firstAttribute="top" secondItem="dmn-l5-VxU" secondAttribute="bottom" constant="8" id="K1N-Kl-eSQ"/>
                             <constraint firstItem="dd4-I6-YBn" firstAttribute="trailing" secondItem="dE2-KC-m07" secondAttribute="trailingMargin" id="Slk-pL-qa3"/>
+                            <constraint firstItem="TBG-3a-YRa" firstAttribute="top" secondItem="W3z-Z7-xWI" secondAttribute="bottom" constant="8" id="THU-lO-RAQ"/>
                             <constraint firstItem="noR-e5-i5O" firstAttribute="top" secondItem="Ce7-bG-Y6S" secondAttribute="bottom" id="TMY-Sc-OLb"/>
                             <constraint firstItem="pc5-6n-K3l" firstAttribute="trailing" secondItem="dE2-KC-m07" secondAttribute="trailingMargin" id="V9Z-zP-KaZ"/>
                             <constraint firstItem="TBG-3a-YRa" firstAttribute="trailing" secondItem="dE2-KC-m07" secondAttribute="trailingMargin" id="a60-lg-x6a"/>
@@ -229,6 +244,12 @@
                             <constraint firstItem="dmn-l5-VxU" firstAttribute="top" secondItem="TBG-3a-YRa" secondAttribute="bottom" constant="8" id="y8n-Cw-jrz"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="button" destination="eKb-ng-IcC" id="6iA-CG-7Mo"/>
+                        <outlet property="label1" destination="TBG-3a-YRa" id="kG0-Gn-XQY"/>
+                        <outlet property="label2" destination="pc5-6n-K3l" id="MwS-kO-GnN"/>
+                        <outlet property="scoreLabel" destination="dd4-I6-YBn" id="StC-h9-Pg4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hrk-ar-9uW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
