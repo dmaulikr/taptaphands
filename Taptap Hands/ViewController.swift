@@ -9,10 +9,23 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    @IBOutlet var label1: UILabel!
+    @IBOutlet var label2: UILabel!
 
+    @IBOutlet var button: UIButton!
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        label1.layer.cornerRadius = 5.0
+        button.layer.cornerRadius = 5.0
+        
+        
+        
+        
     }
 
     override func didReceiveMemoryWarning() {
