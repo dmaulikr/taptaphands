@@ -256,6 +256,24 @@
             </objects>
             <point key="canvasLocation" x="656.79999999999995" y="137.18140929535232"/>
         </scene>
+        <!--End View Controller-->
+        <scene sceneID="5OQ-IJ-gJ8">
+            <objects>
+                <viewController storyboardIdentifier="endGame" id="0yD-1q-2AV" customClass="EndViewController" customModule="Taptap_Hands" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Zfw-16-idl"/>
+                        <viewControllerLayoutGuide type="bottom" id="E2b-6T-6V4"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="rbd-8p-acI">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qL0-JS-xbu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1396" y="137"/>
+        </scene>
     </scenes>
     <resources>
         <image name="background" width="1080" height="1920"/>

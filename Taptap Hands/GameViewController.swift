@@ -23,7 +23,7 @@ class GameViewController: UIViewController {
     var startInt = 3
     var startTimer = Timer()
     
-    var gameInt = 10
+    var gameInt = 3
     var gameTimer = Timer()
     
     
@@ -83,8 +83,18 @@ class GameViewController: UIViewController {
         if (gameInt == 0) {
             gameTimer.invalidate()
             button.isEnabled = false;
+            
+            //trigger view switcher function
+            Timer.scheduledTimer(timeInterval: 2, target: self, selector: #selector(GameViewController.end), userInfo: nil, repeats: false)
+            
         }
+    }
+    
+    func end() {
+        //switch off to the EndViewController
+        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "endGame") as! EndViewController
         
+        self.present(vc, animated: false, completion: nil)
     }
     
 
