@@ -39,6 +39,8 @@
 	<key>branch_key</key>
 	<dict>
 		<key>live</key>
+		<string>key_live_ikuFVxNTlJFn78XHUOqDwehewwmqHiHo</string>
+		<key>test</key>
 		<string>key_test_lgzqSsJNpTAb715KQNVpnhmoEqgBNhTD</string>
 	</dict>
 </dict>

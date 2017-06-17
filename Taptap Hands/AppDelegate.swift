@@ -13,11 +13,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
-    func application(_ application: UIApplication, continue userActivity: NSUserActivity, restorationHandler: @escaping ([Any]?) -> Void) -> Bool {
-        // pass the url to the handle deep link call
-        return Branch.getInstance().continue(userActivity);
-    }
+//    let branch: Branch = Branch.getTestInstance()
+//    branch.setDebug()
+//    //branch.initSession().
+//    
+//    func application(_ application: UIApplication, continue userActivity: NSUserActivity, restorationHandler: @escaping ([Any]?) -> Void) -> Bool {
+//        // pass the url to the handle deep link call
+//        return Branch.getInstance().continue(userActivity);
+//    }
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.

@@ -45,6 +45,10 @@ class GameViewController: UIViewController {
         gameInt = 3
         timeLabel.text = String(gameInt)
         
+        let userDefaults = Foundation.UserDefaults.standard
+        let value = UserDefaults.string(forKey: "Record")
+        recordData = value
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -72,6 +76,7 @@ class GameViewController: UIViewController {
             
             gameTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector:#selector(GameViewController.game), userInfo: nil, repeats: true)
             
+            var recordData:String
         }
         
     }
@@ -83,9 +88,20 @@ class GameViewController: UIViewController {
         if (gameInt == 0) {
             gameTimer.invalidate()
             
-            let savedString = scoreLabel.text
-            let userDefaults = Foundation.UserDefaults.standard
-            userDefaults.set(savedString, forKey: "Key")
+            if recordData == nil { //first time user
+                let savedString = scoreLabel.text
+                let userDefaults = Foundation.UserDefaults.standard
+                userDefaults.set(savedString, forKey: "Key")
+            } else {
+                let score:Int? = Int(scoreLabel.text)
+                let record:Int? = Int(recordData)
+                if score! > record! {
+                    let savedString = scoreLabel.text
+                    let userDefaults = Foundation.UserDefaults.standard
+                    userDefaults.set(savedString, forKey: "Key")
+                }
+            }
+
             
             
             button.isEnabled = false;
