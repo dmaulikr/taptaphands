@@ -17,8 +17,9 @@ class EndViewController: UIViewController {
     @IBOutlet var button2: UIButton!
     @IBOutlet var button3: UIButton!
     @IBOutlet var button4: UIButton!
+    @IBOutlet var scoreLabel: UILabel!
     
-    
+    var scoreData:String!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,6 +30,8 @@ class EndViewController: UIViewController {
         button2.layer.cornerRadius = 5.0
         button3.layer.cornerRadius = 5.0
         button4.layer.cornerRadius = 5.0
+        
+        scoreLabel.text = scoreData
         
         
         // Do any additional setup after loading the view.

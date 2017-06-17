@@ -392,6 +392,7 @@
                         <outlet property="button4" destination="bwI-AY-tHb" id="NKV-Ay-S4l"/>
                         <outlet property="label1" destination="lzy-ni-Uh7" id="K5G-po-eVL"/>
                         <outlet property="label2" destination="Mo7-q6-VLL" id="bcH-Np-OyY"/>
+                        <outlet property="scoreLabel" destination="ou9-b2-ePw" id="D8d-tM-FAf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qL0-JS-xbu" userLabel="First Responder" sceneMemberID="firstResponder"/>

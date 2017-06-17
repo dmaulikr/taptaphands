@@ -82,6 +82,12 @@ class GameViewController: UIViewController {
         
         if (gameInt == 0) {
             gameTimer.invalidate()
+            
+            let savedString = scoreLabel.text
+            let userDefaults = Foundation.UserDefaults.standard
+            userDefaults.set(savedString, forKey: "Key")
+            
+            
             button.isEnabled = false;
             
             //trigger view switcher function
@@ -94,7 +100,11 @@ class GameViewController: UIViewController {
         //switch off to the EndViewController
         let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "endGame") as! EndViewController
         
+        vc.scoreData = scoreLabel.text
+        
         self.present(vc, animated: false, completion: nil)
+        
+        
     }
     
 
