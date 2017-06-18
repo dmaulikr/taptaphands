@@ -25,7 +25,7 @@ class GameViewController: UIViewController {
     
     var gameInt = 10
     var gameTimer = Timer()
-    
+    var recordData:String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,7 +46,7 @@ class GameViewController: UIViewController {
         timeLabel.text = String(gameInt)
         
         let userDefaults = Foundation.UserDefaults.standard
-        let value = UserDefaults.string(forKey: "Record")
+        let value = userDefaults.string(forKey: "Record")
         recordData = value
         
     }
@@ -76,7 +76,6 @@ class GameViewController: UIViewController {
             
             gameTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector:#selector(GameViewController.game), userInfo: nil, repeats: true)
             
-            var recordData:String
         }
         
     }
@@ -91,14 +90,17 @@ class GameViewController: UIViewController {
             if recordData == nil { //first time user
                 let savedString = scoreLabel.text
                 let userDefaults = Foundation.UserDefaults.standard
-                userDefaults.set(savedString, forKey: "Key")
+                userDefaults.set(savedString, forKey: "Record")
             } else {
-                let score:Int? = Int(scoreLabel.text)
+                
+                let score:Int? = Int(scoreLabel.text!)
                 let record:Int? = Int(recordData)
+                
                 if score! > record! {
+                    
                     let savedString = scoreLabel.text
                     let userDefaults = Foundation.UserDefaults.standard
-                    userDefaults.set(savedString, forKey: "Key")
+                    userDefaults.set(savedString, forKey: "Record")
                 }
             }
 

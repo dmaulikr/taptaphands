@@ -316,6 +316,9 @@
                                 <state key="normal" title="Twitter">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="shareTwitter:" destination="0yD-1q-2AV" eventType="touchUpInside" id="ky8-yq-Lea"/>
+                                </connections>
                             </button>
                             <button clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BNX-dl-Xy8">
                                 <rect key="frame" x="16" y="295" width="343" height="40"/>

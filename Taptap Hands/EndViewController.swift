@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Social
 
 class EndViewController: UIViewController {
     
@@ -48,5 +49,24 @@ class EndViewController: UIViewController {
         self.presentingViewController?.dismiss(animated: false, completion: nil)
         
     }
+    
+    
+    @IBAction func shareTwitter(_ sender: Any) {
+        if SLComposeViewController.isAvailable(forServiceType: SLServiceTypeTwitter) {
+            let twitter:SLComposeViewController = SLComposeViewController(forServiceType: SLServiceTypeTwitter)
+            twitter.setInitialText("Check out my score on Taptap Hands, y'all. Whopping \(scoreLabel.text!)")
+            self.present(twitter, animated: true, completion: nil)
+        
+        } else {
+            let alert = UIAlertController(title: "Accounts", message: "Please log into your Twitter acount within the settings", preferredStyle: UIAlertControllerStyle.alert)
+            
+            alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
+            
+            self.present(alert, animated: true, completion: nil)
+        }
+        
+    }
+    
+    
   
 }
